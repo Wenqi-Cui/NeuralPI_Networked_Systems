@@ -1,17 +1,14 @@
-# RNN-Based Reinforcement Learninging Framework for Optimal Frequency Control with Stability Guarantee
+# Structured Neural-PI Control for Networked Systems: Stability and Steady-State Optimality Guarantee
 This repository contains source code necessary to reproduce the results presented in the following paper:
-[Reinforcement Learning for Optimal Frequency Control: A Lyapunov Approach](https://arxiv.org/abs/2009.05654)  
+Structured Neural-PI Control for Networked Systems: Stability and Steady-State Optimality Guarantee 
 
-Authors: Wenqi Cui and Baosen Zhang  
 
-University of Washington 
 
 
 # Motivation
-The increase in penetration of inverter-based resources provide us with more  flexibility in frequency regulation of power systems in addition to conventional linear droop controllers. Because of the fast power electronic interfaces, inverter-based resources can be used to realize complex control functions and potentially offer large gains in performance compared to linear controllers. Reinforcement learning has emerged as popular method to find these nonlinear controllers by parameterizing them as neural networks. 
+We study the control of safety-critical networked systems with the goal of optimizing both transient and steady-state performances. Linear Proportional-Integral (PI)  controllers are almost always used in practice, but the linear parameterization of the controller limits its degrees of freedom for optimizing performances. Learning-based approaches are becoming popular in designing nonlinear controllers, but the lack of stability guarantee makes the learned controllers difficult to apply for practical applications. 
 
-The key challenge with learning based approach is that stability constraints are difficult to enforce on the learned controllers. In addition, the time-coupled dynamics of the power system will 
-greatly slow down the training of the neural network. In this paper, we propose to explicitly engineer the structure of neural network based controllers such that they guarantee system stability for all topologies and parameters. This is done by using a Lyapunov function to guide their structures. A recurrent neural network based reinforcement learning architecture is used to efficiently train the weights of controllers. The resulting controllers only use local information and outperform linear droop as well as strategies learned purely by using reinforcement learning. 
+This paper bridges the gap between neural network-based controller design and stability guarantees. Using a property called equilibrium-independent passivity, which is present in a wide range of physical systems, we propose structured neural-PI controllers that have provable guarantees on stability and zero steady-state output tracking error. If communication between neighbours are available, we further extend the controller to distributedly achieve optimal resource allocation at the steady-state. We explicitly characterize the stability conditions and engineer neural networks that satisfy them by design. Experiments on traffic and power networks demonstrate that the proposed approach can improve both transient and steady-state performances compared to existing state-of-the-art, while unstructured neural networks lead to unstable behaviors. 
 
 
 # Flexible non-linear controller learnt from the proposed framework
