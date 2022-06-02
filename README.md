@@ -12,5 +12,5 @@ This paper bridges the gap between neural network-based controller design and st
 
 
 # Language and Dependencies
-All code are implemented in Python.  We used the open-source Python package Tensorflow 2.0 to implement RNN and train the neural network models. Data for the power system is imported from MATLAB as 'IEEE_39bus_Kron.mat'. 
+All code are implemented in Python.  We used the open-source Python package Tensorflow 2.0 to implement RNN and train the neural networks. Data for the power system is imported from MATLAB as 'IEEE_39bus_Kron.mat'. 
 
